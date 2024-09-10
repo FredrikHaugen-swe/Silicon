@@ -15,7 +15,7 @@
 
     /* Brand */
     --color-primary: #6366F1;
-    --color-gradiant: linear-gradient(to right, #6366F1 0%, #8B5CF6 50%, #D946EF 100%);
+    --color-gradient: linear-gradient(to right, #6366F1 0%, #8B5CF6 50%, #D946EF 100%);
     
     /* System */
     --color-error: #EF4444;
@@ -104,6 +104,54 @@ a:hover {
     height: 100vh;
 }
 
+header {
+    background: linear-gradient(to top, rgba(99, 102, 241, 0.1) 0%, rgba(218, 70, 239, 0.05) 42%, rgba(241, 244, 253, 0.07) 83%);
+    padding-bottom: 2rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+}
+
+
+header .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    p {
+        text-align: center;
+    }
+}
+
+.header-buttons {
+    display: flex;
+    flex-direction: column;
+}
+
+.header-title {
+    font-size: 34px;
+    font-weight: var(--display-font-weight);
+    color: var(--color-grey-900);
+    line-height: 44px;
+}
+
+.header-text {
+    font-size: var(--l-font-size);
+    color: var(--color-grey-700);
+}
+
+.header-img {
+    display: none;
+}
+
+.header-more {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
 #logo {
     padding-top: 4px;
 }
@@ -114,6 +162,7 @@ a:hover {
     padding-right: var(--container-padding);
     margin-left: auto;
     margin-right: auto;
+    padding-top: 4rem;
 }
 
 .btn-primary {
@@ -205,7 +254,7 @@ a:hover {
 
 /* --------------------------------------------- */
 
-.navbar {
+.nav-link {
     display: none;
 }
 
@@ -213,7 +262,7 @@ a:hover {
     display: none;
 }
 
-header .container {
+nav .container {
     display: grid;
     align-items: center;
     grid-template-columns: 1fr auto auto;
@@ -249,6 +298,8 @@ footer .container {
     border: 1px solid var(--color-grey-300);
     border-radius: 8px;
 }
+
+
 /* TABLET */
 
 @media (min-width: 768px) {
@@ -257,7 +308,7 @@ footer .container {
         max-width: 720px;
     }
 
-    header .container {
+   nav .container {
         gap: 5rem;
     }
 
@@ -299,12 +350,12 @@ footer .container {
         max-width: 1320px;
     }
 
-    header .container {
+    nav .container {
         grid-template-columns: auto 1fr auto auto;
         gap: 5rem;
     }
 
-    .navbar {
+    .nav-link {
         display: block;
     }
 
