@@ -112,15 +112,13 @@ header {
 }
 
 
-header .content {
+header .container {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 2rem;
-    p {
-        text-align: center;
-    }
+
 }
 
 .header-buttons {
@@ -133,12 +131,15 @@ header .content {
     font-weight: var(--display-font-weight);
     color: var(--color-grey-900);
     line-height: 44px;
+    text-align: center;
 }
 
 .header-text {
     font-size: var(--l-font-size);
     color: var(--color-grey-700);
+    text-align: center;
 }
+
 
 .header-img {
     display: none;
@@ -338,6 +339,34 @@ footer .container {
     #brand-5, #brand-6 {
         display: none;
     }
+
+    .buttons-bg, .buttons-svg {
+        width: 180px;
+        height: 52px;
+    }
+    
+    .buttons-g {
+        transform: translate(0, 0);
+    }
+
+    .header-img {
+        display: block;
+    }
+
+    .header-title {
+        font-size: 44px;
+    }
+
+    .header-text {
+        text-align: left;
+    }
+
+    .header-buttons {
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+    }
+
 }
 
 
@@ -373,6 +402,10 @@ footer .container {
 
     .brand-box {
         width: 200px;
+    }
+
+    header .content {
+        max-width: 1320px;
     }
 
 }
